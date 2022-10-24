@@ -2,6 +2,9 @@
 GET http://localhost:4000/bacon
 
 ###
+http://localhost:4000/health
+
+###
 GET http://localhost:4000/activities
 
 ### reimport activeites data
