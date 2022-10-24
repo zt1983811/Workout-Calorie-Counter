@@ -51,7 +51,11 @@ express()
   .use(express.urlencoded({ extended: false }))
   .use("/", express.static(__dirname + "/"))
 
-  .get("/health", (req, res) => res.status(200).json("success"));
+  .get("/health", (req, res) => res.status(200)
+    .json({
+        status: 200,
+        message: "success"
+    }))
 
   // activities endpoints
   .get("/import-activities", importActivites)
